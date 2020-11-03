@@ -1,0 +1,9 @@
+Os scripts estão discriminados da seguinte forma.
+
+1) ETL_STAGE_POSTGRES.ipynb -> realiza a carga dos arquivos CSV's, faz o tratamento dos dados, valida se existem duplicados/nulos e converte para a formatação correta dos campos, para serem armazenados no database stage.
+
+2) ETL_PYTHON_BIG_QUERY.ipynb -> realiza a carga dos arquivos CSV's, faz o tratamento dos dados, valida se existem duplicados/nulos e converte para a formatação correta dos campos diretamente para o BigQuery - GCP.
+
+3) GLUE_Catalog.sql -> script para criação da sumarização dos dados dentro do Glue(AWS) para a solução proposta na AWS, capturando os arquivos CSV's armazenados dentro Bucket(S3), para que o Athena possa gerar as visões das tabelas solicitadas.
+
+4) SQL_TABLES.sql -> script de criação das tabelas/visões conforme solicitado no documento. Esses objetos foram utilizados para o script 1.
